@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+	<style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #change-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="Main-heading">orginal hrading</h1>
+    <p class="content">the paragraphh id domthing that you know.</p>
+	<img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+	<br><br>
+	<button id="change-button">change</button>
+	
+	<script>
+		document.getElementById("change-button").addEventListener("click", function(){
+			document.getElementById("Main-heading").textContent="updated heading";
+			document.querySelector("img").setAttribute("alt","updated alt");
+			document.querySelector(".content").textContent="updated text";
+			this.style.backgroundColor = "red";
+		});
+	</script>
+</body>
+</html>

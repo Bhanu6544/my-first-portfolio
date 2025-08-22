@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #change-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="main-heading">Original Heading</h1>
+    <p class="content">This is the original paragraph content.</p>
+    <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="Original Image" style="width:300px; height:auto;">
+    <br><br>
+    <button id="change-button">Change Content</button>
+
+    <script>
+        document.getElementById("change-button").addEventListener("click", function() {
+            document.getElementById("main-heading").textContent = "Updated Heading";
+            document.querySelector("img").setAttribute("alt", "Updated Image");
+            document.querySelector(".content").textContent = "This is the updated paragraph content with new information.";
+            this.style.backgroundColor = "red";
+        });
+    </script>
+</body>
+</html>
